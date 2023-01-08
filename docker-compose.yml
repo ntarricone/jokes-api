@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:14.4
+    container_name: jokes-db
+    ports:
+      - '5432:5432'
+    volumes:
+      - progresDB:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      APP_DB_NAME: jokes
+volumes:
+  progresDB:
