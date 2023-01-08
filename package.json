@@ -1,0 +1,43 @@
+{
+  "name": "jokes-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "scripts": {
+    "api:init": "docker-compose up -d --remove-orphans && npm install && npm run prisma:init",
+    "prisma:seed": "prisma migrate deploy && prisma db seed",
+    "build:start": "tsc && node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only --exit-child src/index.ts",
+    "prisma:init": "prisma generate && npm run prisma:seed",
+    "start": "node dist/index.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntarricone/jokes-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntarricone/jokes-api/issues"
+  },
+  "homepage": "https://github.com/ntarricone/jokes-api#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.13",
+    "prisma": "^4.7.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.7.1",
+    "dotenv": "^16.0.3",
+    "express": "4.18.2",
+    "node-fetch": "^3.3.0"
+  }
+}
