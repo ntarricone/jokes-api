@@ -8,7 +8,7 @@
     
 ## Setup
 
-Get the code by either cloning this repository using git
+Get the code by cloning this repository using git
 
 `git clone git@github.com:ntarricone/jokes-api.git`
 
@@ -16,11 +16,11 @@ Once downloaded, open the terminal in the project directory, and run following c
 
 **(Please make sure you have Docker running)**
 
-`npm run api:init ***or*** yarn api:init`
+`npm run api:init OR yarn api:init`
 
 Then start the example app with:
 
-`npm run dev ***or*** yarn dev` (for development)
+`npm run dev OR yarn dev` (for development)
 
 or
 
